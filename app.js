@@ -17,7 +17,7 @@ app.post('/login', (res, req) => {
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.get((req, res, next) => {
   // Redirect to LinkedIn 404 Page
   res.redirect("https://www.linkedin.com/help/linkedin/answer/85928/page-not-found-error?lang=en");
 });
