@@ -10,8 +10,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser);
 
-app.use('/', routes);
+// accept and log all post requests
+// app.post('/', (res, req) => {
+//     console.log(req);
+//     req.redirect("https://www.linkedin.com/uas/login");
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
